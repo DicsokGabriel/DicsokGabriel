@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public interface Element {
+public interface Element {
+    public print(){
+
+    }
 }
