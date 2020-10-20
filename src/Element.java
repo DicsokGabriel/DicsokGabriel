@@ -1,5 +1,5 @@
 public interface Element {
-    public print(){
+    public void print(){
 
     }
 }

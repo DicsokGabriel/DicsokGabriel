@@ -16,5 +16,8 @@ public class Section {
     public Element getElement(int index){
         return content.get(index);
     }
-    
+     public void  print(){
+
+     }
+
 }
