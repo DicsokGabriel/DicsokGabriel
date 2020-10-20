@@ -1,11 +1,11 @@
-public class Image {
-    String imageName;
-
-    public Image(String n){
-        imageName=n;
+public class Image implements Element {
+    public String name;
+    Image(String n)
+    {
+        name=n;
     }
-    public String toString(){
-        return "Image with name: "+imageName+"\n";
+    public void print()
+    {
+        System.out.println("Image with name: "+name);
     }
-
 }

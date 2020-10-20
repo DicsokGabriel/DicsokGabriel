@@ -1,10 +1,11 @@
-public class Paragraph {
-    String text;
-
-    public Paragraph(String t){
-        text=t;
+public class Paragraph implements Element {
+    public String name;
+    Paragraph(String n)
+    {
+        name=n;
     }
-    public String toString(){
-        return "Paragraph: "+text+"\n";
+    public void print()
+    {
+        System.out.println("Paragraph: "+name);
     }
 }

@@ -1,48 +1,36 @@
 import java.util.ArrayList;
 
-public class SubChapter {
-    String name;
-    ArrayList<Image> images = new ArrayList<Image>();
-    ArrayList<Paragraph> paragraphs = new ArrayList<Paragraph>();
-    ArrayList<Table> tables = new ArrayList<Table>();
-
-    public SubChapter(String n){
+public class SubChapter{
+    public String name;
+    ArrayList<Paragraph> pharagraphs=new ArrayList<>();
+    ArrayList<Image> images=new ArrayList<>();
+    ArrayList<Table> tables=new ArrayList<>();
+    SubChapter(String n) {
         name=n;
     }
 
-
-    public void createNewImage(String s){
-        Image i=new Image(s);
-        images.add(i);
+    public void createNewParagraph(String s) {
+        Paragraph paragraph = new Paragraph(s);
+        pharagraphs.add(paragraph);
     }
 
-    public void createNewParagraph(String s){
-        Paragraph p=new Paragraph(s);
-        paragraphs.add(p);
+    public void createNewImage(String s) {
+        Image image=new Image(s);
+        images.add(image);
     }
 
-    public void createNewTable(String s){
-        Table p=new Table(s);
-        tables.add(p);
+    public void createNewTable(String s) {
+        Table table=new Table(s);
+        tables.add(table);
     }
 
-    public String toString(){
-        String s;
-        s="SubChapter: "+name+"\n";
-        for (Paragraph el:paragraphs) {
-            s=s+el.toString();
-        }
-        for (Image img:images) {
-            s=s+img.toString();
-
-        }
-        for (Table tl:tables) {
-            s = s + tl.toString();
-
-        }
-
-        return s;
+    public void print() {
+        System.out.println(name);
+        for (Paragraph p: pharagraphs
+             ) {System.out.println(p.name);}
+        for (Image i: images
+        ) {System.out.println(i.name);}
+        for (Table t: tables
+        ) {System.out.println(t.name);}
     }
-
-
 }
